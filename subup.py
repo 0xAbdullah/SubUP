@@ -28,7 +28,7 @@ def getSubDomainsAndChcekWhoIsUP():
     req = requests.get('https://api.hackertarget.com/hostsearch/?q={}'.format(domain)).text
     for subdomains in req.splitlines():
         subdomain = subdomains.replace(',', ' ').split()
-        # The code below was written by 1337r00t
+        # The code below was written by 1337r00t from script WebAlive (https://github.com/1337r00t/WebAlive).
         try:
             isHTTP = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             isHTTP.settimeout(1.5)
